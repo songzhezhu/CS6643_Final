@@ -29,7 +29,7 @@ def rotateImage(src, degree):
     RotateMatrix = cv2.getRotationMatrix2D((w / 2.0, h / 2.0), degree, 1)
     print(RotateMatrix)
     # 仿射变换，背景色填充为黑色
-    rotate = cv2.warpAffine(src, RotateMatrix, (w, h), borderValue=(0, 0, 0))
+    rotate = cv2.warpAffine(src, RotateMatrix, (w, h), borderValue=(255, 255, 255))
     return rotate
 
 def switch_grayscale(image):
